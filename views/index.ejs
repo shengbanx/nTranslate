@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/reset.css' />
+ 
+    <link rel='stylesheet' href='/stylesheets/typo.css' />
+       <link rel='stylesheet' href='/stylesheets/main.css' />
+    <script src="/javascripts/marked.js"></script>
+  </head>
+  <body>
+    <h3 class="title">嗯，翻译</h3>
+
+<div id="editor" class="side-w editor"># 欢迎使用 **嗯，翻译**
+**嗯，翻译**是一个专为辅助翻译~~搬砖~~打造的Markdown编辑器。
+- **简洁优雅** ：界面清新，专注翻译。 
+- **辅助翻译** ：支持机器翻译显示，划词词典查询，提高翻译效率。
+- **文档输出** ：文档输出功能帮助你完成翻译后输出各类型文档。
+- **自动保存** ：绑定云储存帐号，即刻保存，永不丢失。
+***
+开发者：
+
+shengbanx
+
+Colachan
+
+</div>
+
+
+<div id="preview" class="side-w preview">
+</div>
+
+<script src="/javascripts/ace/ace.js" type="text/javascript" charset="utf-8"></script>
+<script>
+    
+    
+    var editor = ace.edit("editor");
+    editor.setTheme("ace/theme/ntranslate");
+    editor.setShowPrintMargin(false);
+    document.getElementById('editor').style.fontSize='0.9em';
+    document.getElementById('editor').style.lineHeight='1.5em';
+    editor.getSession().setUseWrapMode(true);
+    
+    
+    var refreshPreview = function(){
+    document.getElementById('preview').innerHTML = marked(editor.getValue());
+}
+
+refreshPreview();
+
+editor.on('change', function(e){
+    refreshPreview();
+});
+
+
+    
+</script>
+
+  </body>
+</html>

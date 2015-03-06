@@ -1,0 +1,58 @@
+html, body{
+        overflow: hidden;
+    
+}
+
+body, h1, h2, h3, h4, h5, p {
+font-family: "Noto Sans CJK SC", "Microsoft YaHei", "微软雅黑","Helvetica Neue",Helvetica,sans-serif;
+}
+
+.side-w {
+        padding-left:0;
+    padding-right:0;
+    position:relative;
+}
+
+.editor {
+
+    border-right:1px solid #E8E8E8;
+    float:left;
+    height:calc(100vh - 130px);
+    -webkit-overflow-scrolling:touch;
+    padding-right:2%;
+    width:49%
+
+}
+
+.preview {
+    background-color:#fff;
+	display:none;
+	position:absolute;
+	top:129px;
+	z-index:4;
+    display:block;
+	float:right;
+	height:calc(100vh - 130px);
+	-webkit-overflow-scrolling:touch;
+	position:static;
+	top:0;
+	width:48%
+
+}
+
+.preview .title {
+    padding-left: 0;
+}
+
+.title {
+line-height: 1rem;
+margin-bottom: .77999rem;
+padding-top: .22001rem;
+font-weight: 500;
+color: #A0AABF;
+letter-spacing: 1px;
+text-transform: uppercase;
+padding-left: 16px;
+padding-right: 16px;
+margin-top: 1rem;
+}
